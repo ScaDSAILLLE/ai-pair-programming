@@ -181,6 +181,6 @@ Lernen über Chat, Beispiele und gemeinsames Coden mit dem Agenten.
 ## 📜 <a name="lizenz">Lizenz</a>
 
 Workshop-Material steht unter **CC BY 4.0**, Oliver Welz\
-Code: MIT-Lizenz (see [LICENSE](LICENSE.md))
+Code: MIT-Lizenz (see [LICENSE](LICENSE))
 
 ---
