@@ -4,6 +4,7 @@ Ziel: Du baust in kurzer Zeit ein **mini Python-Projekt**, lernst **Variablen, F
 
 Wir arbeiten nach Best Practice:
 
+* **kleine Einführung in das Thema *Programmieren (mit Python)***
 * **eigener Projektordner**
 * **uv-Umgebung** (oder venv)
 * **kleine Schritte + Rückfragen**
@@ -11,16 +12,177 @@ Wir arbeiten nach Best Practice:
 
 ---
 
-## 📁 **1) Projekt anlegen (1 Min)**
+## 🧠 **0) Mini-Grundlagen: Was machen wir hier eigentlich? (5–7 Min)**
 
-Ordner erstellen, z. B.:
+Bevor wir Code schreiben, klären wir **ein paar Basics**, damit du weißt, *was* du tust – und warum.
 
-```bash
-mkdir -p ~/vibe_projects/python_intro
-cd ~/vibe_projects/python_intro
+👉 **Wichtig:**
+Du sollst das **nicht auswendig lernen**, sondern **lesen + mit dem Coding Agent darüber sprechen**.
+
+---
+
+### 🐍 **0.1 Was ist Python?**
+
+**Python** ist eine Programmiersprache.
+
+* Sie ist **leicht lesbar**
+* sehr beliebt für **Anfänger**
+* wird genutzt für:
+
+  * Web-Apps
+  * KI & Data Science
+  * Automatisierung
+  * Spiele & Tools
+
+Ein Python-Programm ist einfach eine **Textdatei mit Anweisungen**, die der Computer **Zeile für Zeile** ausführt.
+
+📌 Beispiel:
+
+```python
+print("Hallo Welt")
 ```
 
-👉 Öffne diesen Ordner in deinem Tool (Goose/OpenCode/VOID).
+➡️ Der Computer liest das und gibt Text aus.
+
+#### 💬 Chat mit dem Coding Agent
+
+> Erkläre mir bitte in einfachen Worten, was Python ist
+> und wofür man es im echten Leben nutzt.
+> Stelle mir danach 2 Verständnisfragen.
+
+---
+
+### 🧩 **0.2 Was ist Programmieren?**
+
+**Programmieren heißt:**
+
+> Dem Computer Schritt für Schritt sagen,
+> **was** er tun soll und **wann**.
+
+Ein Programm besteht aus:
+
+* **Eingaben** (z. B. Tastatur)
+* **Logik** (Entscheidungen)
+* **Ausgaben** (Text, Datei, Website)
+
+📌 Alltagssprache → Programmiersprache.
+
+Beispiel:
+
+> „Wenn es regnet → nimm einen Schirm.“
+
+In Python:
+
+```python
+if rain:
+    take_umbrella()
+```
+
+---
+
+### 🧱 **0.3 Die wichtigsten Grundbausteine (die wir gleich brauchen)**
+
+Keine Sorge – das sind nur **4 Dinge**, die wir sofort anwenden.
+
+---
+
+#### 🔹 1) Variablen – Dinge merken
+
+Eine **Variable** speichert einen Wert.
+
+```python
+name = "Alex"
+age = 25
+```
+
+👉 Der Computer merkt sich etwas unter einem Namen.
+
+💬 **Agenten-Chat**
+
+> Erkläre mir bitte, was Variablen sind.
+> Gib mir 3 Beispiele aus dem echten Leben
+> und 3 Beispiele in Python.
+
+---
+
+#### 🔹 2) `input()` – Nutzer fragen
+
+```python
+name = input("Wie heißt du? ")
+```
+
+👉 Das Programm wartet auf eine Eingabe.
+
+⚠️ **Wichtig:**
+`input()` liefert **immer Text (String)** – selbst wenn du Zahlen eingibst.
+
+---
+
+#### 🔹 3) Bedingungen – Entscheidungen treffen
+
+```python
+if age < 18:
+    print("Noch nicht volljährig")
+else:
+    print("Willkommen!")
+```
+
+👉 Programme können **denken in Wenn–Dann–Sonst**.
+
+---
+
+#### 🔹 4) Listen – mehrere Dinge speichern
+
+```python
+hobbies = ["music", "sports", "coding"]
+```
+
+👉 Eine Liste ist wie eine Einkaufsliste.
+
+```python
+if "coding" in hobbies:
+    print("Nice!")
+```
+
+---
+
+### 🧠 **0.4 Mini-Übung (wichtig!)**
+
+👉 **Jetzt kurz selbst denken – nicht nur lesen**
+
+💬 **Prompt an den Coding Agent:**
+
+> Stelle mir bitte 5 sehr leichte Verständnisfragen zu:
+>
+> * Variablen
+> * input()
+> * if/else
+> * Listen
+>   Warte nach jeder Frage auf meine Antwort und korrigiere mich freundlich.
+
+➡️ **Erst wenn das halbwegs sitzt, geht es weiter.**
+
+---
+
+## 🟢 **Jetzt geht’s los**
+
+👉 **Ab hier arbeiten wir wie echte Entwickler:innen:**
+
+* Projekt anlegen
+* Umgebung vorbereiten
+* Code schreiben
+* testen
+* verbessern
+
+---
+
+## 📁 **1) Projekt anlegen (1 Min)**
+
+Wenn du das nicht sowieso schon gemacht hast oder der Coding Agent vorbereitet war: eigenen Ordner erstellen, z. B.:
+
+Lege einen Projektordner an, z.B. auf dem Desktop: `/mein-projekt`
+
+👉 Öffne  mit eimen der Coding-Agents (Goose/OpenCode/VOID) diesen Ordner.
 
 ---
 
@@ -33,18 +195,24 @@ cd ~/vibe_projects/python_intro
 > * `pyproject.toml` minimal
 > * virtuelle Umgebung
 > * eine Datei `main.py`
->   Bitte erkläre kurz, welche Befehle du nutzt und wie ich sie ausführe.
+>   Bitte erkläre kurz, welche Befehle du nutzt und wie ich sie ausführe. Oder führe sie eigens aus im Projektordner
 
 Typische Befehle (Agent soll sie dir geben, du führst sie aus):
 
 ```bash
 uv init
-uv venv
+uv add
+uv sync
 ```
 
-**Mini-Task (du!):**
-👉 Frage nach: „Wofür ist eine virtuelle Umgebung gut?“
-👉 Lass dir erklären, wie man sie aktiviert (oder wie uv sie automatisch nutzt).
+### Mini-Task (du!):
+
+**👉 Frage nach: „Wofür ist eine virtuelle Umgebung gut?“** \
+**👉 Lass dir erklären, wie man sie aktiviert (oder wie uv sie automatisch nutzt).**
+
+> z.B.:
+> * Erkläre mir, was eine virtuelle Umgebung in Python ist, warum man das macht, was das bringt und teile mir Schritt für Schritt mit, wie ich damit umgehe, um das für mein Projekt zu nutzen.
+> * Stelle mir ein paar Testfragen dazu, die ich beantworten muss. So können wir gemeinsam prüfen, ob ich es grundlegend verstanden habe.
 
 ---
 
@@ -55,7 +223,7 @@ uv venv
 > Lege `main.py` an, die Folgendes macht:
 >
 > 1. Fragt den Namen per `input()` ab
-> 2. Gibt „Hallo <Name>!“ aus
+> 2. Gibt „Hallo `<Name>`!“ aus
 > 3. Wenn der Name leer ist, soll „Hallo Stranger!“ kommen
 >    Bitte erkläre den Code zeilenweise.
 

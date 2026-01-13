@@ -1,4 +1,4 @@
-# Willkommen beim ai-pair-programming Workshop: Co-Coding mit KI zum programmieren lernen oder um kleine Projekte á la *vibe coding*. 
+# Willkommen beim *ai-pair-programming* Workshop: Co-Coding mit KI zum programmieren lernen oder um kleine Projekte á la *vibe coding*. 
 **Viel Spaß!** \
 *Weitere Infos findest du in der [Präsentation](260115_scads_ai_pair_programming_workshop.pdf)*
 
