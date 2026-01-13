@@ -1,4 +1,4 @@
-# **Beispiel 2 – Funktionale Klaviatur-UI (Web) mit VOID**
+# **Beispiel 1 – Funktionale Klaviatur-UI (Web) mit VOID**
 
 In diesem Beispiel baust du mit Hilfe von **VOID** und einem KI-Modell eine kleine **virtuelle Klaviatur im Browser**:
 

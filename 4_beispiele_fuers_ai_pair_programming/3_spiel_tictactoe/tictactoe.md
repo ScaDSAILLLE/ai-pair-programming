@@ -1,4 +1,4 @@
-# **Beispiel 1 – TicTacToe (Python) mit Goose Desktop**
+# **Beispiel 2 – TicTacToe (Python) mit Goose Desktop**
 
 Dieses Beispiel zeigt, wie du mit **Goose Desktop** und einem starken Coding-Modell (z. B. *devstral-2512*, *Llama-3-70B-Instruct*, *gpt-4.1*, *claude-sonnet-4.0*) Schritt für Schritt ein TicTacToe-Spiel in Python entwickelst.
 
